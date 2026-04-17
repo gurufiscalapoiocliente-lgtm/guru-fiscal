@@ -73,11 +73,15 @@
 }
 /* Ficheiro: index.css */
 
-/* Esconde os botões de login, share e user no topo direito */
-header div.flex.items-center.gap-2, 
+/* Remove os botões de Partilha e Utilizador/Login no topo direito */
+header .flex.items-center.gap-2,
 header .flex.items-center.space-x-2,
-header button:has(svg.lucide-share2),
-header button:has(svg.lucide-user),
-header button:has(svg.lucide-log-in) {
+header button:has(svg), 
+header .flex.items-center.gap-1 {
+    display: none !important;
+}
+
+/* Se quiseres ser ainda mais radical e limpar toda a zona direita do cabeçalho */
+header div.flex.items-center:last-child {
     display: none !important;
 }
