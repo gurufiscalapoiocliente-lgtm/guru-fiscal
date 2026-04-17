@@ -71,3 +71,13 @@
 .prose-slate tr:last-child td {
   @apply border-b-0;
 }
+/* Ficheiro: index.css */
+
+/* Esconde os botões de login, share e user no topo direito */
+header div.flex.items-center.gap-2, 
+header .flex.items-center.space-x-2,
+header button:has(svg.lucide-share2),
+header button:has(svg.lucide-user),
+header button:has(svg.lucide-log-in) {
+    display: none !important;
+}
